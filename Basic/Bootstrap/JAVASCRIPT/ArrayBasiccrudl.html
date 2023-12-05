@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arraycrudl</title>
+</head>
+<body>
+    <script>
+        //Two ways of created by array in javascript
+
+        let FirstArray=["Apsheya","Haripriya",89,'S',true];//first process
+
+        var secondArray=new Array();//runtime performance
+
+        secondArray.push("Manojkumar");
+        secondArray.push('S');
+        secondArray.push(8.9);
+        secondArray.push(false);
+
+        //  document.writeln(secondArray+"<br>");
+
+        //  secondArray.pop();//last element only deleeted
+        //  secondArray.pop()
+        //  document.writeln(secondArray+"<br>");
+
+
+        // for(i=0;i<secondArray.length;i++)
+        // {
+        //     alert(secondArray[i])
+        // }
+
+        // function print(data)
+        // {
+        //     alert(data)
+        // }
+        
+        // secondArray.map(print)
+
+        let inputbox=prompt("Tell us what is position you want delete");
+
+        secondArray=secondArray.filter((data,pos)=>
+        {
+            return data!==secondArray[inputbox];// Manojkumar,s,8.9,false !== secondArray[1]
+        })
+
+
+        secondArray.map((data)=>//list a array value using by map function in fat arrow
+        {
+            document.write(data+"<br>")
+        })
+
+
+
+
+    </script>
+    
+</body>
+</html>
